@@ -42,7 +42,7 @@ def cond_dist(x, y, max_dev=3):
             yx = np.round(yx * 2)
             yx[yx > vmax] = vmax
             yx[yx < vmin] = vmin
-            count_yx = Counter(yx.astype(int))
+            count_yx = Counter(yx)
             pyx_x = np.array([count_yx[i] for i in vrange], dtype=np.float64)
             pyx_x = pyx_x / pyx_x.sum()
             pyx.append(pyx_x)
@@ -58,7 +58,7 @@ def CKL(A, B, **kargs):
     return (pyx * np.log((pyx + EPSILON) / (mean_y + EPSILON))).sum(axis=1).mean()
 
 def CKM(A, B, **kargs):
-    '''Causal score via Kullback-Leibler divergence'''
+    '''Causal score via Kolmogorov metric'''
     pyx = cond_dist(A, B, **kargs)
     if len(pyx) == 0:
         return 0
