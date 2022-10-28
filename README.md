@@ -58,12 +58,13 @@ python CDCI.py -m CCS CHD CKL CKM CTV -d D4S1 D4S2A D4S2B D4S2C --hyper
 
 If this code helps in your work, please consider citing us as:
 ```
-@inproceedings{
-  duong2022bivariate,
-  title={Bivariate Causal Discovery via Conditional Divergence},
-  author={Bao Duong and Thin Nguyen},
-  booktitle={First Conference on Causal Learning and Reasoning},
+@inproceedings{duong2022bivariate,
+  title={Bivariate causal discovery via conditional divergence},
+  author={Duong, Bao and Nguyen, Thin},
+  booktitle={Conference on Causal Learning and Reasoning},
+  pages={236--252},
   year={2022},
-  url={https://openreview.net/forum?id=8X6cWIvY_2v}
+  organization={PMLR}
 }
+
 ```
